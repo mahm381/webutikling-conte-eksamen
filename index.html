@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisebyrå- forside</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <img src="images/logo.png" alt="Reisebyrå Logo" class="logo">
+            <div class="header-icons">
+                <a href="#"><img src="images/search-icon.png" alt="Søk"></a>
+                <a href="#"><img src="images/user-icon.png" alt="Bruker"></a>
+                <a href="#"><img src="images/menu-icon.png" alt="Meny"></a>
+            </div>
+      
+    </header>
+    <main>
+        <section class="booking-form">
+            <h1>Finn din neste reise</h1>
+            <form>
+                <label for="from">Fra</label>
+                <select id="from">
+                    <option>Oslo Lufthavn</option>
+                    <option>Bergen Lufthavn</option>
+                </select>
+
+                <label for="to">Til</label>
+                <select id="to">
+                    <option>Albania</option>
+                    <option>Spania</option>
+                </select>
+
+                <label for="duration">Reiselengde</label>
+                <select id="duration">
+                    <option>Mindre enn 1 uke</option>
+                    <option>1-2 uker</option>
+                </select>
+
+                <label for="date">Velg dato</label>
+                <input type="date" id="date">
+
+                <label for="passengers">Antall reisende</label>
+                <select id="passengers">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+
+                <button type="submit">Søk</button>
+            </form>
+        </section>
+
+        <section class="popular-destinations">
+            <h2>Populære destinasjoner</h2>
+            <article>
+                <img src="images/destination1.jpg" alt="Albania">
+                <h3>Albania</h3>
+            </article>
+            <article>
+                <img src="images/destination2.jpg" alt="Spania">
+                <h3>Spania</h3>
+            </article>
+            <article>
+                <img src="images/destination3.jpg" alt="Italia">
+                <h3>Italia</h3>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-top">
+            <article class="footer-logo">
+                <img src="images/logo.png" alt="Reisebyrå Logo">
+                <p>Reisebyrå</p>
+            </article>
+            <article class="footer-contact">
+                <h3>Kontakt oss</h3>
+                <p>Telefon: 123 45 678</p>
+                <p>E-post: post@reisebyrå.no</p>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>
