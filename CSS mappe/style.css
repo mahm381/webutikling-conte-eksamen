@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* body styles */
 .body, html {
   margin: 0;
   padding: 0;
@@ -18,21 +18,40 @@
   width: 100%;
 }
 
+
 /* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* Change from 'right' to 'center' (valid CSS) */
   padding: 10px 20px;
   height: 60px;
-  padding: 10px 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+  
+
 }
 
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
 
-.header-logo{
+.nav-icons {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
   margin: 0;
+  margin-left: auto; /* Moves navigation icons to the right */
+}
+
+.nav-icons li a {
+  font-size: 1.5rem;
+  color: black;
 }
 
 
@@ -413,14 +432,20 @@ color: #252525;
 }
 
 /* Footer Styles */
+/* Footer */
 footer {
-  background-color: #1a1a1a;
-  color: rgb(9, 9, 9);
+  background: #251d1d;
+  color: white;
   padding: 20px;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 30px;
 }
-
+.payment-methods img, .social-media img {
+  width: 40px;
+  margin: 5px;
+  margin-top: 10px;
+}
+ 
 
 /* Landseksjon */
 .countries {
@@ -429,6 +454,7 @@ footer {
   align-items: center;
   gap: 10px; /* Avstand mellom radene */
   text-align: center;
+  margin-top: 30px; /* Avstand fra forrige seksjon */
 
 }
 
@@ -439,6 +465,8 @@ ul {
   padding: 0;
   margin: 0;
   gap: 40px; /* Avstand mellom flaggene */
+  margin-bottom: 20px; /* Adjust this value for vertical spacing */
+  
 }
 
 li {
@@ -460,11 +488,19 @@ img {
   display: flex;
   flex-direction: column; /* Stack title and icons vertically */
   align-items: flex-start; /* Aligns text and icons to the left */
-  padding-left: 20px; /* Adjust left padding to position correctly */
+  padding-left: 30px; /* Adjust left padding to position correctly */
+  margin-top: 30px; /* Adds space between sections */
+  gap: 50px;
+  text-align: left;
+  margin-bottom: 100px; /* Adjust this value for vertical spacing */
+  
+
 }
 
 .payment-methods h3 {
-  margin-bottom: 10px; /* Adds space between title and icons */
+  margin-top: none;
+  gap: 0;
+  margin-bottom: 20px;
 }
 
 .payment-methods ul {
@@ -473,9 +509,8 @@ img {
   gap: 15px; /* Space between icons */
   padding: 0;
   list-style: none; /* Removes default list styling */
+  margin-bottom: 10px; /* Adds space between title and icons */
 }
-
-
 
 .payment-methods li {
   background: white;
@@ -484,78 +519,188 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px; /* Bredde for å matche bildet */
-  height: 40px; /* Høyde for å matche bildet */
+  width: 30px; /* Bredde for å matche bildet */
+  height: 30px; /* Høyde for å matche bildet */
   position: left;
+  margin-bottom: 10px; /* Adds space between title and icons */
+
 }
 
 .payment-methods i {
-  font-size: 2rem; /* Ikonstørrelse */
+  font-size: 1.5rem; /* Ikonstørrelse */
   color: black;
+  margin-top: 5px;
 }
+
 
 /* Fjerner standard linkeffekt */
 .payment-methods a {
   text-decoration: none;
   color: inherit;
+
 }
 
-/* Nyhetsbrev */
+/* Nyhetsbrev-seksjon */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Plassering av NYHETER & TILBUD */
 .newsletter h3 {
-  font-size: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px; /* Mindre mellomrom før boksen */
+  text-align: left;
 }
 
+/* Hvit ramme rundt input-boksen */
+.newsletter-box {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  padding: 15px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 3px;
+  position: relative;
+}
+
+/* Plassering av "Meld deg på nyhetsbrev her" */
+.newsletter-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: -12px;
+  background: black;
+  padding: 0 10px;
+}
+
+/* Horisontale linjer på hver side */
+.newsletter-header::before,
+.newsletter-header::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+  display: block;
+  margin: 0 10px;
+  display: flex;
+}
+
+/* Input-boksen og send-knappen skal stå ved siden av hverandre */
 .newsletter form {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
+/* Input-felt */
 .newsletter input {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
   flex: 1;
+  border: none;
+  background: white;
+  padding: 8px;
+  font-size: 1rem;
+  color: black;
+  border-radius: 3px;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* Send-knapp (plassert ved siden av input) */
 .newsletter button {
-  background-color: #ffcc00;
+  background-color: #FFC107;
   border: none;
   padding: 10px 15px;
-  margin-left: 5px;
   cursor: pointer;
-  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+  border-radius: 3px;
+  margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
+/* "Kjøp reisegavekort"-link */
 .newsletter a {
-  display: block;
-  margin-top: 10px;
   color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+}
+
+.newsletter a:hover {
   text-decoration: underline;
 }
 
-/* Kundeservice */
-.customer-service h3 {
-  font-size: 16px;
+
+
+/* Container for Newsletter and Kundeservice */
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px; /* Ensures proper spacing */
+  max-width: 800px; /* Controls the max width */
+  margin: 10px; /* Centers the sections */
 }
 
+/* Kundeservice Section */
+.customer-service {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  text-align: left;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Kundeservice Title */
+.customer-service h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px; /* Space below heading */
+  gap: 10px; /* Space between heading and links */
+}
+
+/* Kundeservice List */
 .customer-service ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.customer-service li {
-  margin: 5px 0;
+.customer-service ul li {
+  margin-bottom: 8px; /* Space between links */
 }
 
-.customer-service a {
-  color: white;
+.customer-service ul li a {
   text-decoration: none;
+  color: white;
+  font-size: 1rem;
 }
 
-.customer-service a:hover {
-  text-decoration: underline;
+.customer-service ul li a:hover {
+  text-decoration: underline; /* Hover effect */
 }
+
 
 /* Sosiale medier */
 .social-media h3 {
@@ -1305,7 +1450,7 @@ iframe {
 
 /* Footer */
 footer {
-  background: #2A324B;
+  background: #251d1d;
   color: white;
   padding: 20px;
   text-align: center;
@@ -1313,7 +1458,9 @@ footer {
 .payment-methods img, .social-media img {
   width: 40px;
   margin: 5px;
+  margin-top: 10px;
 }
+ 
 
 /* Responsiv design */
 @media (min-width: 768px) {
