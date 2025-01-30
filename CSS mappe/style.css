@@ -447,7 +447,7 @@ footer {
   margin: 5px;
   margin-top: 10px;
 }
- 
+
 
 
 /* Landseksjon */
@@ -457,18 +457,17 @@ footer {
   align-items: center;
   gap: 10px; /* Avstand mellom radene */
   text-align: center;
-  margin-top: 30px; /* Avstand fra forrige seksjon */
+  margin-top: -20px; /* Avstand fra forrige seksjon */
+  position: relative;
+  top: -150px;
+ 
 
 }
 
 ul {
   display: flex;
   justify-content: center;
-  list-style: none; /* Fjerner standard punktmerking */
-  padding: 0;
-  margin: 0;
   gap: 40px; /* Avstand mellom flaggene */
-  margin-bottom: 20px; /* Adjust this value for vertical spacing */
   
 }
 
@@ -482,7 +481,7 @@ li {
 }
 
 img {
-  height: 30px; /* Justerer flaggstørrelsen */
+  height: 40px; /* Justerer flaggstørrelsen */
 }
 
 
@@ -716,6 +715,8 @@ img {
   height: 30px;
   width: 30px;
 }
+/*te her va koden*/
+
 
 /* To remove cointainers */
 .countries,
@@ -1448,19 +1449,6 @@ iframe {
   cursor: pointer;
 }
 
-/* Footer */
-footer {
-  background: #251d1d;
-  color: white;
-  padding: 300px 30px 300px 30px; /* Adjusted padding */
-  text-align: center;
-}
-.payment-methods img, .social-media img {
-  width: 40px;
-  margin: 5px;
-  margin-top: 10px;
-}
- 
 
 /* Responsiv design */
 @media (min-width: 768px) {
