@@ -436,16 +436,19 @@ color: #252525;
 footer {
   background: #251d1d;
   color: white;
-  padding: 20px;
+  padding: 300px 30px 300px 30px; /* Adjusted padding */
   text-align: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
+
+
 .payment-methods img, .social-media img {
   width: 40px;
   margin: 5px;
   margin-top: 10px;
 }
  
+
 
 /* Landseksjon */
 .countries {
@@ -562,6 +565,8 @@ img {
   text-align: left;
 }
 
+
+
 /* Hvit ramme rundt input-boksen */
 .newsletter-box {
   display: block;
@@ -586,7 +591,7 @@ img {
   color: white;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
-  top: -12px;
+  top: 12px;
   background: black;
   padding: 0 10px;
 }
@@ -652,35 +657,23 @@ img {
 
 
 
-/* Container for Newsletter and Kundeservice */
-.footer-sections {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px; /* Ensures proper spacing */
-  max-width: 800px; /* Controls the max width */
-  margin: 10px; /* Centers the sections */
-}
-
-/* Kundeservice Section */
+/* Kundeservice-seksjon */
 .customer-service {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
-  text-align: left;
+  text-align: left; /* Teksten er venstrejustert */
   color: white;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 20px;
 }
 
-/* Kundeservice Title */
+/* Overskrift for kundeservice */
 .customer-service h3 {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 15px; /* Space below heading */
-  gap: 10px; /* Space between heading and links */
+  margin-bottom: 10px;
 }
 
-/* Kundeservice List */
+/* Liste med kundeservice-lenker */
 .customer-service ul {
   list-style: none;
   padding: 0;
@@ -688,18 +681,25 @@ img {
 }
 
 .customer-service ul li {
-  margin-bottom: 8px; /* Space between links */
+  margin-bottom: 8px; /* Avstand mellom lenkene */
 }
 
 .customer-service ul li a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  display: block; /* Sørger for at lenkene står i rekke nedover */
 }
 
 .customer-service ul li a:hover {
-  text-decoration: underline; /* Hover effect */
+  text-decoration: underline;
 }
+
+
+
+
+
+
 
 
 /* Sosiale medier */
@@ -1452,7 +1452,7 @@ iframe {
 footer {
   background: #251d1d;
   color: white;
-  padding: 20px;
+  padding: 300px 30px 300px 30px; /* Adjusted padding */
   text-align: center;
 }
 .payment-methods img, .social-media img {
