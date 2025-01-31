@@ -436,7 +436,7 @@ color: #252525;
 footer {
   background: #251d1d;
   color: white;
-  padding: 300px 30px 300px 30px; /* Adjusted padding */
+  padding: 200px 30px 200px 30px; /* Adjusted padding */
   text-align: center;
   margin-top: 50px;
 }
@@ -491,18 +491,15 @@ img {
   flex-direction: column; /* Stack title and icons vertically */
   align-items: flex-start; /* Aligns text and icons to the left */
   padding-left: 30px; /* Adjust left padding to position correctly */
-  margin-top: 30px; /* Adds space between sections */
-  gap: 50px;
-  text-align: left;
-  margin-bottom: 100px; /* Adjust this value for vertical spacing */
-  
-
+  text-align: left;  
+  gap: 20px;
+  top: -100px;
+  position: relative;
 }
 
 .payment-methods h3 {
   margin-top: none;
-  gap: 0;
-  margin-bottom: 20px;
+  gap: 2px;
 }
 
 .payment-methods ul {
@@ -511,7 +508,7 @@ img {
   gap: 15px; /* Space between icons */
   padding: 0;
   list-style: none; /* Removes default list styling */
-  margin-bottom: 10px; /* Adds space between title and icons */
+  margin-bottom: 40px; /* Adds space between title and icons */
 }
 
 .payment-methods li {
@@ -524,8 +521,6 @@ img {
   width: 30px; /* Bredde for å matche bildet */
   height: 30px; /* Høyde for å matche bildet */
   position: left;
-  margin-bottom: 10px; /* Adds space between title and icons */
-
 }
 
 .payment-methods i {
