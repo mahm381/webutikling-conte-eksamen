@@ -542,10 +542,10 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
-  margin-top: 20px;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 /* Plassering av NYHETER & TILBUD */
@@ -555,15 +555,17 @@ img {
   text-transform: uppercase;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 10px; /* Mindre mellomrom før boksen */
+  margin-bottom: 1px; /* Mindre mellomrom før boksen */
   text-align: left;
+  margin-top: -43px;
+  text-align: left;  
+  position: relative;
 }
 
 
 
-/* Hvit ramme rundt input-boksen */
 .newsletter-box {
-  display: block;
+  display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid white;
@@ -571,23 +573,33 @@ img {
   width: 100%;
   max-width: 350px;
   border-radius: 3px;
-  position: relative;
+  margin-top: 10px;
 }
+
+/* Input-boksen og send-knappen skal stå ved siden av hverandre */
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
 
 /* Plassering av "Meld deg på nyhetsbrev her" */
 .newsletter-header {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
   font-size: 0.9rem;
   font-weight: bold;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  top: 12px;
-  background: black;
-  padding: 0 10px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
 }
 
 /* Horisontale linjer på hver side */
@@ -598,8 +610,9 @@ img {
   height: 1px;
   background-color: white;
   display: block;
-  margin: 0 10px;
-  display: flex;
+  margin: 0 10px; /* Justerer avstand mellom tekst og linjer */
+  border: 1px solid white;
+  margin-bottom: 10px;
 }
 
 /* Input-boksen og send-knappen skal stå ved siden av hverandre */
@@ -607,15 +620,18 @@ img {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-between;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+ 
 }
 
 /* Input-felt */
-.newsletter input {
+.newsletter-form input {
   flex: 1;
   border: none;
   background: white;
-  padding: 8px;
+  padding: 10px;
   font-size: 1rem;
   color: black;
   border-radius: 3px;
@@ -624,18 +640,16 @@ img {
 }
 
 /* Send-knapp (plassert ved siden av input) */
-.newsletter button {
+.newsletter-form button {
   background-color: #FFC107;
   border: none;
   padding: 10px 15px;
-  cursor: pointer;
   font-weight: bold;
   color: black;
   border-radius: 3px;
+  cursor: pointer;
   margin-left: 10px;
-  font-family: 'Montserrat', sans-serif;
 }
-
 /* "Kjøp reisegavekort"-link */
 .newsletter a {
   color: white;
@@ -649,17 +663,15 @@ img {
   text-decoration: underline;
 }
 
-
-
 /* Kundeservice-seksjon */
 .customer-service {
-  text-align: left; /* Teksten er venstrejustert */
+  text-align: left; /* Justerer teksten til venstre */
   color: white;
   font-family: 'Montserrat', sans-serif;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Overskrift for kundeservice */
+/* Overskrift for Kundeservice */
 .customer-service h3 {
   font-size: 1.2rem;
   font-weight: bold;
@@ -669,48 +681,23 @@ img {
 
 /* Liste med kundeservice-lenker */
 .customer-service ul {
-  list-style: none;
+  list-style: none; /* Fjerner punktmerking */
   padding: 0;
   margin: 0;
 }
 
+/* Hvert punkt i listen */
 .customer-service ul li {
-  margin-bottom: 8px; /* Avstand mellom lenkene */
+  margin-bottom: 8px; /* Avstand mellom elementene */
 }
 
+/* Lenker */
 .customer-service ul li a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  display: block; /* Sørger for at lenkene står i rekke nedover */
+  display: block; /* Sørger for at hvert punkt står på en egen linje */
 }
-
-.customer-service ul li a:hover {
-  text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-/* Sosiale medier */
-.social-media h3 {
-  font-size: 16px;
-}
-
-.social-media a {
-  display: inline-block;
-  margin: 10px;
-}
-
-.social-media img {
-  height: 30px;
-  width: 30px;
-}
-/*te her va koden*/
 
 
 /* To remove cointainers */
