@@ -436,7 +436,7 @@ color: #252525;
 footer {
   background: #251d1d;
   color: white;
-  padding: 200px 30px 200px 30px; /* Adjusted padding */
+  padding: 200px 30px 150px 30px; /* Adjusted padding */
   text-align: center;
   margin-top: 50px;
 }
@@ -541,29 +541,18 @@ img {
 .newsletter {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 350px;
   text-align: left;
   margin-bottom: 20px;
-}
-
-/* Plassering av NYHETER & TILBUD */
-.newsletter h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  margin-bottom: 1px; /* Mindre mellomrom før boksen */
-  text-align: left;
-  margin-top: -43px;
-  text-align: left;  
+  gap: 100px;
   position: relative;
 }
 
-
-
+/* Nyhetsbrev-boksen */
 .newsletter-box {
   display: flex;
   flex-direction: column;
@@ -573,57 +562,44 @@ img {
   width: 100%;
   max-width: 350px;
   border-radius: 3px;
-  margin-top: 10px;
+  background: #181818;
+  position: relative;
 }
 
-/* Input-boksen og send-knappen skal stå ved siden av hverandre */
-.newsletter-form {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border: 1px solid white;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-
-
-/* Plassering av "Meld deg på nyhetsbrev her" */
+/* Plassering av "Meld deg på nyhetsbrev her" INNE i boksen */
 .newsletter-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   font-size: 0.9rem;
   font-weight: bold;
   color: white;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
   position: relative;
-  text-align: center;
+  text-transform: none;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-/* Horisontale linjer på hver side */
+/* Horisontale linjer på hver side av teksten */
 .newsletter-header::before,
 .newsletter-header::after {
   content: "";
   flex-grow: 1;
   height: 1px;
   background-color: white;
-  display: block;
-  margin: 0 10px; /* Justerer avstand mellom tekst og linjer */
-  border: 1px solid white;
-  margin-bottom: 10px;
+  margin: 0 10px;
 }
 
-/* Input-boksen og send-knappen skal stå ved siden av hverandre */
-.newsletter form {
+/* Input-boks og knapp inline */
+.newsletter-form {
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px solid white;
-  padding: 10px;
   border-radius: 5px;
- 
+  background: white;
+  padding: 5px;
+  border: none;
 }
 
 /* Input-felt */
@@ -631,37 +607,33 @@ img {
   flex: 1;
   border: none;
   background: white;
-  padding: 10px;
+  padding: 12px;
   font-size: 1rem;
   color: black;
-  border-radius: 3px;
+  border-radius: 5px;
   outline: none;
   font-family: 'Montserrat', sans-serif;
+  text-align: left;
 }
 
-/* Send-knapp (plassert ved siden av input) */
+/* Send-knapp */
 .newsletter-form button {
   background-color: #FFC107;
   border: none;
-  padding: 10px 15px;
+  padding: 12px 15px;
   font-weight: bold;
   color: black;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
-  margin-left: 10px;
-}
-/* "Kjøp reisegavekort"-link */
-.newsletter a {
-  color: white;
-  text-decoration: none;
+  margin-left: 5px;
   font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 10px;
 }
 
-.newsletter a:hover {
-  text-decoration: underline;
+/* Hover-effekt på knappen */
+.newsletter-form button:hover {
+  background-color: #e6a800;
 }
+
 
 /* Kundeservice-seksjon */
 .customer-service {
@@ -729,6 +701,7 @@ img {
 
 .newsletter form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px; /* Keeps proper spacing */
 }
