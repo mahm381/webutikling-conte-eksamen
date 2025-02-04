@@ -21,16 +21,11 @@
 
 /* Header styles */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Change from 'right' to 'center' (valid CSS) */
-  padding: 10px 20px;
-  height: 60px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-y: hidden;
-  
-
+  display: grid;
+  grid-template-rows: 300px auto auto auto; /* Fire rader */
+  grid-template-columns: 1fr;
+  width: 100%;
+  position: relative;
 }
 
 .top-nav {
@@ -53,6 +48,46 @@
   font-size: 1.5rem;
   color: black;
 }
+
+/* Navigasjon */
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  top: -10px;
+  z-index: 2;
+}
+
+/* Navigasjonslenker */
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Aktiv fane */
+.nav-links a.active {
+  color: #0094FF;
+  border-bottom: 3px solid #0094FF;
+}
+
+/* Ikon-størrelse */
+.nav-links i {
+  font-size: 1.2rem;
+}
+
+
 
 
 .logo {
@@ -177,6 +212,265 @@
   margin-top: -100px;
 }
 
+
+/*banner*/ 
+/* === General Styling === */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #E1E5EE;
+}
+
+/* === Header Section === */
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Top Navigation === */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 15px 20px;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+
+.logo img {
+  height: 30px;
+  width: 30px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+.nav-icons li a {
+  font-size: 20px;
+  color: black;
+}
+
+/* === Banner Image === */
+.header img {
+  width: 100%;
+  height: 350px;
+}
+
+/* === Booking Container === */
+.booking-container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+ 
+}
+
+
+
+/* === Navigation Links (Tabs) === */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.nav-links a img {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid #1ca2c1;
+}
+
+/* === Booking Form === */
+.booking-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* === Grid for Date & Duration Fields === */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-row fieldset {
+  width: 50%;
+}
+
+/* === Search Button === */
+.search-button {
+  background-color: #FFC107;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.search-button:hover {
+  background-color: #E0A800;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .booking-container {
+      width: 95%;
+      top: 120px;
+  }
+
+  .form-row {
+      flex-direction: column;
+  }
+
+  .form-row fieldset {
+      width: 100%;
+  }
+
+  .nav-links {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+  }
+
+  .nav-links a {
+      font-size: 16px;
+  }
+}
+
+
+/* Disable scrolling and hide scroll arrow on desktop */
+@media (min-width: 769px) {
+  .booking-links {
+    overflow-x: visible;
+  }
+
+  .scroll-arrow {
+    display: none;
+  }
+}
+
+/* Booking-seksjon */
+.booking-container {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  top: auto;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Styling for skjema */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Knapp */
+.search-button {
+  background-color: #FFC107;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.search-button:hover {
+  background-color: #E0A800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Form styles */
 .form-group {
   margin-bottom: 15px;
@@ -223,7 +517,7 @@
   left: 8px;
   padding: 0 4px;
   font-size: 11px;
-  color: #666;
+  color: #fffafa;
   background-color: white;
   z-index: 2;
   font-weight: 500;
@@ -906,6 +1200,34 @@ header {
   align-items: center;
   justify-content: center;
 }
+
+
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Adjust transparency */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
 
 .booking-form {
   display: flex;

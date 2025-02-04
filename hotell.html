@@ -3,33 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotell Bestilling</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Reisebyrå - Forside</title>
+    <link rel="stylesheet" href="CSS mappe/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="gallery">
-            <div class="slider">
-                <img src="img/img/landscape-2016308_640.jpg" alt="Bilde 1">
-                <img src="img/img/holiday-2733322_1280.jpg" alt="Bilde 2">
-                <img src="img/img/beach-1836467_640.jpg" alt="Bilde 3">
-                <img src="img/img/holiday-2733322_1280.jpg" alt="Bilde 4">
-                <img src="img/img/beach-666122_640.jpg" alt="Bilde 5">
-                <img src="" alt="Bilde 6">
-            </div>
-            <div class="icons">
-                <span class="heart-icon">❤️</span>
-                <span class="image-count">6 bilder</span>
-            </div>
-        </div>
-        <nav class="navigation">
-            <a href="#overview">Oversikt</a>
-            <a href="#facilities">Fasiliteter</a>
-            <a href="#map">Kart</a>
-            <a href="#rooms">Tilgjengelige rom</a>
-        </nav>
-    </header>
-    <main>
+    <!-- Header logo and navigation -->
+   <header class="header">
+    <nav class="top-nav">
+        <a href="#" class="logo">
+            <img src="img/img/fav.png" alt="Reisebyrå logo">
+        </a>
+        <ul class="nav-icons">
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="#"><i class="fas fa-user"></i></a></li>
+            <li><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+   </header>
+<main>
+
+</main>
         <section id="overview" class="overview">
             <h1>Hotellnavn</h1>
             <p>⭐⭐⭐⭐⭐</p>
@@ -79,14 +74,64 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <nav class="footer-navigation">
-            <a href="#overview">Oversikt</a>
-            <a href="#facilities">Fasiliteter</a>
-            <a href="#map">Kart</a>
-            <a href="#rooms">Tilgjengelige rom</a>
+
+    
+    <footer>
+        <section class="countries">
+            <ul class="country-row">
+                <li><img src="flagg mappe/sweden.png" alt="Sverige"><span>Sverige</span></li>
+                <li><img src="flagg mappe/denmark.png" alt="Danmark"><span>Danmark</span></li>
+            </ul>
+            <ul class="country-row">
+                <li><img src="flagg mappe/norway.png" alt="Norge"><span>Norge</span></li>
+                <li><img src="flagg mappe/material.png" alt="Suomi"><span>Suomi</span></li>
+            </ul>
+            <ul class="country-row single">
+                <li><img src="flagg mappe/netherlands.png" alt="Nederland"><span>Nederland</span></li>
+            </ul>
+        </section>
+      <br>
+        <section class="payment-methods">
+            <h3>BETALINGSMETODER</h3>
+            <ul>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
+                <li><i class="fa-brands fa-apple-pay"></i></li>
+                <li><i class="fa-brands fa-amazon-pay"></i></li>
+            </ul>
+        </section>
+
+        <article class="newsletter">
+            <h3>NYHETER & TILBUD</h3>
+            <form>
+                <span>Meld deg på nyhetsbrevet</span>
+                <div style="display:flex; flex-direction: row;">
+                    <input type="email" name="email" placeholder="ola@example.com">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <a href="#">Kjøp reisegavekort</a>
+        </article>
+
+        <nav class="customer-service">
+            <h3>KUNDESERVICE</h3>
+            <ul>
+                <li><a href="#">Spørsmål og Svar</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="tilgjengelighetserklaering.html">Tilgjengelighetserklæring</a></li>
+            </ul>
         </nav>
-        <p>© 2020 Hotellnavn</p>
+
+        <section class="social-media">
+            <h3>SOSIALE MEDIER</h3>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </section>
     </footer>
 </body>
 </html>
