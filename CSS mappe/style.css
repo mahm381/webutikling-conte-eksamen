@@ -352,19 +352,6 @@ select, input {
   background: #FFA000;
 }
 
-/* RESPONSIV DESIGN */
-@media (max-width: 768px) {
-  .booking-container {
-      width: 95%;
-      max-width: 400px;
-      margin: -120px auto 0 auto;
-  }
-
-  .banner-container {
-      height: 250px;
-  }
-}
-
 
 /* === Navigation Links (Tabs) === */
 .nav-links {
@@ -1346,6 +1333,7 @@ header {
   margin: 10px 0;
 
 }
+
 .image-container {
   position: relative;
   display: inline-block; /* Ensures container fits image size */
@@ -1360,7 +1348,7 @@ header {
   position: relative;
   bottom: 10%; /* Adjusts vertical positioning */
   left: 5%; /* Adjusts horizontal positioning */
-  width: 20%; /* Adjust size of blue box */
+  width: 50%; /* Adjust size of blue box */
   padding: 20px;
   background: #33C3F0; /* Blue background */
   color: black;
@@ -1382,6 +1370,7 @@ header {
 }
 
 
+
 .button-link {
   display: inline-block;
   padding: 10px 20px;
@@ -1397,12 +1386,6 @@ header {
 
 .button-link:hover {
   background-color: #ffc107;
-}
-@media (min-width: 768px) {
-    .campaign-content {
-        text-align: right;
-        padding: 40px;
-    }
 }
 
 
@@ -1921,6 +1904,8 @@ iframe {
 }
 
 
+
+/*For mobil */
 /* Responsiv design */
 @media (min-width: 768px) {
   .gallery {
@@ -1938,20 +1923,6 @@ iframe {
   }
 }
 
-
-/* Desktop Layout */
-@media (min-width: 768px) {
-  .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(3, auto);
-      gap: 10px;
-  }
-  .gallery img:nth-child(1) {
-      grid-column: span 2;
-      grid-row: span 2;
-  }
-}
 
 /* Container for the article cards */
 .article-container {
@@ -1999,12 +1970,41 @@ iframe {
   }
 }
 
-/* Responsive layout for desktop */
-@media (min-width: 769px) {
-  .article-container {
-    justify-content: space-between;
+@media (min-width: 768px) {
+  .campaign-content {
+      text-align: right;
+      padding: 40px;
   }
-  .article-card {
-    width: 30%;
+}
+
+
+/* Responsiv design */
+@media (min-width: 768px) {
+  .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 10px;
+  }
+  .slider img {
+      display: none;
+  }
+  .rom-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+  .booking-container {
+      width: 95%;
+      max-width: 400px;
+      margin: -120px auto 0 auto;
+  }
+
+  .banner-container {
+      height: 250px;
   }
 }
