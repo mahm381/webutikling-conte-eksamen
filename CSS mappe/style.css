@@ -29,10 +29,9 @@ main {
 /* Header styles */
 .header {
   display: grid;
-  grid-template-rows: 300px auto auto auto; /* Fire rader */
+  grid-template-rows: 1fr auto auto auto; /* Deler headeren i to rader */
   grid-template-columns: 1fr;
   width: 100%;
-  position: relative;
 }
 
 .top-nav {
@@ -269,94 +268,140 @@ body {
 
 /* === Banner Image === */
 .banner {
-  background-image: url('img/img/sea.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  width: 100%;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
+ grid-row: 1 / 2;
+  height: 300px; /* Justert for å matche bildet */
+  background: url('img/img/sea.jpg') no-repeat center center/cover;
+ width: 500px;
 }
-
-
-/* === Booking Container === */
 .booking-container {
-  display: grid;
-  place-items: center;
+  grid-row: 2 / 3;
   position: relative;
   width: 100%;
-  max-width: 500px; /* Juster etter behov */
-  margin: 0 auto; /* Sentrerer på siden */
+  max-width: 1000px;
   background: white;
-  padding: 20px;
-  z-index: 10; /* Sørger for at den vises foran andre elementer */
- 
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: -160px auto 0 auto; /* Flytter halvveis over banneret */
+  z-index: 10;
 }
 
-
-
-/* === Navigation Links (Tabs) === */
-.nav-links {
+/* Navigasjon over skjema */
+.booking-container .nav-links {
   display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-.nav-links a {
+/* Navigasjonslenker */
+.booking-container .nav-links a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: black;
   display: flex;
   align-items: center;
   gap: 5px;
-  position: relative;
-  padding-bottom: 8px;
 }
 
-.nav-links a img {
-  width: 20px;
-  height: 20px;
+.booking-container .nav-links a.active {
+  color: #007bff;
 }
 
-.nav-links a.active {
-  border-bottom: 3px solid #1ca2c1;
-}
-
-/* === Booking Form === */
-.booking-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
+/* Skjema-elementer */
 fieldset {
   border: none;
   padding: 0;
+  margin-bottom: 15px;
+  gap: 5px;
 }
 
 legend {
   font-size: 14px;
   font-weight: bold;
   color: black;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 select, input {
-  width: 100%;
-  padding: 10px;
+  width: 60%;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
   background-color: #fff;
 }
+
+/* Søke-knapp */
+.search-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #FFC107;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.search-button:hover {
+  background: #FFA000;
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+  .booking-container {
+      width: 95%;
+      max-width: 400px;
+      margin: -120px auto 0 auto;
+  }
+
+  .banner-container {
+      height: 250px;
+  }
+}
+
+
+/* === Navigation Links (Tabs) === */
+.nav-links {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+}
+
+.nav-links a img {
+  width: 20px;
+  height: 20px;
+}
+.nav-links a.active {
+  color: #1ca2c1;
+  border-bottom: 3px solid #1ca2c1;
+}
+
+
+
+
+
 
 /* === Grid for Date & Duration Fields === */
 .form-row {
@@ -389,31 +434,25 @@ select, input {
 }
 
 /* === Responsive Design === */
-@media (max-width: 768px) {
-  .booking-container {
-      width: 95%;
-      top: 120px;
-  }
 
-  .form-row {
-      flex-direction: column;
-  }
-
-  .form-row fieldset {
-      width: 100%;
-  }
-
-  .nav-links {
-      overflow-x: auto;
-      white-space: nowrap;
-      padding-bottom: 10px;
-  }
-
-  .nav-links a {
-      font-size: 16px;
-  }
+.nav-links {
+  overflow-x: scroll;
+  padding-right: 40px; /* Unngå overlapping med pil */
 }
 
+.scroll-indicator {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+.nav-links {
+  overflow-x: hidden;
+}
+
+.scroll-indicator {
+  display: none;
+}
+}
 
 /* Disable scrolling and hide scroll arrow on desktop */
 @media (min-width: 769px) {
@@ -431,9 +470,8 @@ select, input {
 
 /* Styling for skjema */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  gap: 5px;
 }
 
 fieldset {
@@ -469,64 +507,6 @@ select, input {
 .search-button:hover {
   background-color: #E0A800;
 }
-
-
-
-
-/* Eksklusive tilbud seksjon */
-.exclusive-deals {
-  width: 90%;
-  max-width: 600px;
-  margin: auto;
-  overflow: hidden; /* Skjuler eventuell scrolling */
-}
-
-/* Scrollbar swipe container */
-.deal-container {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Gir bedre scrolling på iOS */
-  padding-bottom: 10px; /* For å unngå at scrollbar dekker tekst */
-}
-
-/* Skjuler scrollbar men lar scrolling fungere */
-.deal-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hvert kort */
-.deal-card {
-  flex: 0 0 80%; /* Justerer bredden på kortene */
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  scroll-snap-align: center;
-  text-align: center;
-}
-
-/* Tekst-styling */
-.deal-card h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.deal-card a {
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.deal-card a:hover {
-  text-decoration: underline;
-}
-
-
-
-
 
 
 
@@ -699,6 +679,7 @@ margin-bottom: 20px;
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tilpasser antall kolonner */
 gap: 20px;
+
 }
 
 article {
@@ -784,7 +765,6 @@ font-size: 0.9rem;
 color: #252525;
 }
 
-/* Footer Styles */
 /* Footer */
 footer {
   background: #251d1d;
@@ -1317,94 +1297,116 @@ header {
   }
 }
 
+
 /* Campaign Section Styles */
 
 .campaign-section {
-background-image: url('../img/img/holiday-2733322_1280.jpg'); /* Bruk riktig bilde her */
-position: relative; /* Sørger for at den ikke overlapper */
-margin-top: 50px; /* Skyver den ned fra booking-seksjonen */
-text-align: center;
-background: #2A324B;
-color: white;
-padding: 30px;
-border-radius: 8px;
-max-width: 600px;
-margin-left: auto;
-margin-right: auto;
+  background-image: url('../img/img/holiday-2733322_1280.jpg'); /* Bruk riktig bilde her */
+  background-position: center;
+  max-width: 500px;
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
 }
 
-
-
-
-
 .campaign-content {
-background-color: #45c5e2; /* Solid turquoise background */
-padding: 10px 15px;
-border-radius: 10px;
-text-align: right;
-color: rgb(0, 0, 0);
-max-width: 500px;
-display: flex;
-flex-direction: column;
-gap: 3px;
+  background-color: #45c5e2; /* Solid turquoise background */
+  padding: 20px;
+  height: 200px;
+  border-radius: 10px;
+  text-align: right;
+  color: rgb(0, 0, 0);
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 
 }
 
 .campaign-content h1 {
-font-size: 24px;
-font-weight: bold;
-margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .campaign-content p {
-font-size: 18px;
-margin: 5px 0;
-text-align: left;
+  font-size: 18px;
+  margin: 5px 0;
+  text-align: left;
 }
 
 .campaign-content .price {
-font-size: 22px;
-font-weight: bold;
-margin: 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
 
 }
+.image-container {
+  position: relative;
+  display: inline-block; /* Ensures container fits image size */
+}
+
+.image-container img {
+  width: 100%; /* Keeps the image responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.blue-box {
+  position: relative;
+  bottom: 10%; /* Adjusts vertical positioning */
+  left: 5%; /* Adjusts horizontal positioning */
+  width: 20%; /* Adjust size of blue box */
+  padding: 20px;
+  background: #33C3F0; /* Blue background */
+  color: black;
+  border-radius: 20px; /* Curved corners */
+}
+
+.blue-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.blue-box p {
+  font-size: 16px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+}
+
 
 .button-link {
-display: inline-block;
-padding: 10px 20px;
-background-color: #ffcc00; /* Gul farge */
-color: black;
-font-weight: bold;
-text-decoration: none;
-border-radius: 5px;
-text-align: center;
-transition: background-color 0.3s ease;
-align-self: flex-start;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffcc00; /* Gul farge */
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
 .button-link:hover {
-background-color: #ffc107;
+  background-color: #ffc107;
 }
 @media (min-width: 768px) {
-  .campaign-content {
-      text-align: right;
-      padding: 40px;
-  }
+    .campaign-content {
+        text-align: right;
+        padding: 40px;
+    }
 }
 
-/* Hide specific buttons and sections on mobile */
-@media (max-width: 768px) {
-  .desktop-only {
-    display: none;
-  }
-}
 
-/* Ensure specific buttons and sections are visible on desktop */
-@media (min-width: 769px) {
-  .desktop-only {
-    display: block;
-  }
-}
+
 
 /* Header Styles */
 .header {
@@ -1559,8 +1561,7 @@ background-color: #ffc107;
 
 /* Banner section styles */
 .banner {
-  margin-top: 64px; /* Header height */
-  background: linear-gradient(to bottom, #FFE5E5, #E5F6FF);
+  margin-top: 69px; /* Header height */
   padding: 1rem;
 }
 
@@ -1725,11 +1726,142 @@ nav ul li a.active::after {
 
 /* Seksjoner */
 section {
-  padding: 20px;
+  padding: 10px;
   background: white;
+  flex-direction: column;
   margin: 10px;
   border-radius: 10px;
 }
+/* Hovedseksjon */
+.offers-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background: #fff;
+}
+
+/* Container for kortene */
+.offers-container {
+    display: flex;
+    gap: 16px; /* Avstand mellom kortene */
+    overflow-x: auto; /* Swipe-mulighet på mobil */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+    max-width: 1200px;
+}
+
+/* Skjuler scrollbar, men lar scrolling fungere */
+.offers-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Kortene */
+.offer-card {
+    flex: 0 0 320px; /* Ensartet bredde */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    scroll-snap-align: center;
+}
+
+/* Tekst-stil */
+.offer-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+/* Link-stil */
+.offer-card a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.offer-card a:hover {
+    text-decoration: underline;
+}
+
+/* Desktop-visning: Alle kort vises side om side */
+@media (min-width: 1024px) {
+    .offers-container {
+        overflow-x: hidden;
+        justify-content: center;
+    }
+
+    .offer-card {
+        flex: 1;
+        max-width: 350px;
+    }
+}
+
+/* Flex container for kortene */
+.offers-container {
+  display: flex;
+  gap: 15px; /* Gir lik luft mellom kortene */
+  overflow-x: auto; /* Scroll horisontalt på mobil */
+  scroll-snap-type: x mandatory; /* Snap-funksjon for smooth scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  padding: 10px;
+  max-width: 1200px;
+  align-items: center;
+}
+
+/* Skjuler scrollbar, men lar scrolling fungere */
+.offers-container::-webkit-scrollbar {
+  display:flex;
+}
+
+/* Kortene */
+.offer-card {
+  flex: 0 0 320px; /* Ensartet bredde */
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+/* Tekstformat */
+.offer-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.offer-card a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.offer-card a:hover {
+  text-decoration: underline;
+}
+
+/* Desktop-visning: Alle kort vises side om side */
+@media (min-width: 1024px) {
+  .offers-container {
+      overflow-x: hidden; /* Deaktiver scrolling */
+      justify-content: center;
+  }
+
+  .offer-card {
+      flex: 1; /* Automatisk jevn fordeling */
+      max-width: 350px;
+  }
+}
+
+
 
 .rating {
   display: flex;
@@ -1818,5 +1950,61 @@ iframe {
   .gallery img:nth-child(1) {
       grid-column: span 2;
       grid-row: span 2;
+  }
+}
+
+/* Container for the article cards */
+.article-container {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+/* Individual article card */
+.article-card {
+  flex: 0 0 auto;
+  width: 30%;
+  margin: 0 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Article card heading */
+.article-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Article card link with double arrow icons */
+.article-card a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007BFF;
+}
+
+.article-card a::after {
+  content: " »";
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .article-card {
+    width: 80%;
+  }
+}
+
+/* Responsive layout for desktop */
+@media (min-width: 769px) {
+  .article-container {
+    justify-content: space-between;
+  }
+  .article-card {
+    width: 30%;
   }
 }

@@ -11,7 +11,7 @@
 <body>
 
     <!-- Header logo and navigation -->
-  <header class="header">
+  <header class="header-grid">
     <nav class="top-nav">
         <a href="#" class="logo">
             <img src="img/img/fav.png" alt="Reisebyrå logo">
@@ -22,13 +22,12 @@
             <li><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
     </nav>
-</header>
-
-<!-- Banner Background -->
+    <!-- Banner Background -->
 <div class="banner-container">
     <img src="img/img/sea.jpg" alt="Banner" class="banner">
+    
 </div>
-
+</header>
 <!-- Booking Section (Now properly placed) -->
 <section class="booking-container">
     <nav class="nav-links">
@@ -37,6 +36,8 @@
         <a href="#"><i class="fa-solid fa-city"></i> Storby</a>
         <a href="#"><i class="fa-solid fa-skiing"></i> Ski</a>
         <a href="#"><i class="fa-solid fa-map"></i> Kombinasjonssreise</a>
+        <i class="fas fa-chevron-right scroll-indicator"></i> <!-- Pil for mobil -->
+
     </nav>
 
     <form>
@@ -86,10 +87,6 @@
     </form>
 </section>
 <main>
-    <!-- Booking Section -->
-    <section class="booking-container">
-        <!-- Din eksisterende booking-kode -->
-    </section>
 
     <!-- Campaign Section (Plassert riktig under booking) -->
     <section id="campaign" class="campaign-section">
@@ -101,14 +98,7 @@
         </article>
     </section>
 
-    <section id="special-offer" class="campaign-section">
-        <article class="campaign-content">
-            <h1>Eksklusive tilbud for deg</h1>
-            <p>Få spesialpriser på utvalgte reisemål</p>
-            <p class="price">Spar opptil 50%</p>
-            <a href="#" class="button-link">Se tilbud</a>
-        </article>
-    </section>
+    
     <!-- Eksklusive Tilbud Swipe -->
 <section class="exclusive-deals">
     <article class="deal-container">
@@ -126,8 +116,6 @@
         </section>
     </article>
 </section>
-
-
 
     <section id="tips" class="tips-inspiration">
         <h2>Tips & Inspirasjon</h2>
@@ -171,6 +159,32 @@
             <a href="#">Les mer &rarr;</a>
         </article>
     </section>  
+
+    <section class="articles-section">
+        <div class="articles-container">
+            <article class="article-card">
+                <h3>First Article Title</h3>
+                <a href="#">
+                    Read More
+                    <span>&#x2192;&#x2192;</span>
+                </a>
+            </article>
+            <article class="article-card">
+                <h3>Second Article Title</h3>
+                <a href="#">
+                    Read More
+                    <span>&#x2192;&#x2192;</span>
+                </a>
+            </article>
+            <article class="article-card">
+                <h3>Third Article Title</h3>
+                <a href="#">
+                    Read More
+                    <span>&#x2192;&#x2192;</span>
+                </a>
+            </article>
+        </div>
+    </section>
 </main>
 
 
