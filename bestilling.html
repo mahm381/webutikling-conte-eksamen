@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reisebyrå - Forside</title>
+    <link rel="stylesheet" href="CSS mappe/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header logo and navigation -->
+  <header class="header-grid">
+    <nav class="top-nav">
+        <a href="index.html" class="logo">
+            <img src="img/img/fav.png" alt="Reisebyrå logo">
+        </a>
+        <ul class="nav-icons">
+            <li><a href="#"><i class="fas fa-search"></i></a></li>
+            <li><a href="#"><i class="fas fa-user"></i></a></li>
+            <li><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+    <!--Sliding bar breadcrumbs blue-->
+    <nav>
+        <ul class="breadcrumbs">
+            <li><a href="hotell.html" style="color: white;">Søk</a></li>
+            <li><a href="index.html" style="color: white;">Søkeresultater</a></li>
+            <li><a href="hotell.html#available-rooms" style="color: white;">Romtype</a></li>
+            <li><a href="https://www.norwegian.com" target="_blank" style="color: white;">Fly</a></li>
+            <li>Tillegg</li>
+            <li>Startside</li>
+            <li>Produkter</li>
+            <li>Kategorier</li>
+            <li>Kontakt oss</li>
+        </ul>
+    </nav>
+    <!--Dine valg-->
+     <section>
+        <button class="choice-box" aria-label="Dine valg">Dine valg</button>
+     </section>
+   </header>
+<main>
+<!--bestillingsopplysninger-->
+<section class="container">
+    <h2>Oppgi dine bestillingsopplysninger</h2>
+    <h3>VOKSEN 18+ HOVEDBESTILLER</h3>
+    
+    <label for="fornavn">FORNAVN (IFØLGE PASS):</label>
+    <input type="text" id="fornavn">
+
+    <label for="etternavn">ETTERNAVN (IFØLGE PASS):</label>
+    <input type="text" id="etternavn">
+    <fieldset class="dob-container">
+        <legend><strong>FØDSELSDATO:</strong></legend>
+        <input type="number" min="1" max="31" placeholder="DD">
+        <input type="number" min="1" max="12" placeholder="MM">
+        <input type="number" min="1900" max="2025" placeholder="ÅÅÅÅ">
+    </fieldset>
+    
+
+    <fieldset class="gender-container">
+        <legend><strong>KJØNN</strong></legend>
+        <label>
+            <input type="radio" name="gender" value="kvinner">
+            KVINNE
+        </label>
+        <label>
+            <input type="radio" name="gender" value="mann">
+            MANN
+        </label>
+    </fieldset>
+    
+
+    <label for="epost">E-POSTADRESSE:</label>
+    <input type="email" id="epost">
+
+    <label for="telefon">TELEFONNUMMER:</label>
+    <input type="text" id="telefon">
+
+    <label for="gateadresse">GATEADRESSE:</label>
+    <input type="text" id="gateadresse">
+
+    <label for="postnummer">POSTNUMMER:</label>
+    <input type="text" id="postnummer">
+
+    <label for="poststed">POSTSTED:</label>
+    <input type="text" id="poststed">
+
+    <label for="land">LAND:</label>
+    <select id="land"><option>Velg et land</option></select>
+</section>
+
+<br>
+<br>
+
+<section class="container">
+    <h3>VOKSEN 18+</h3>
+    <label for="fornavn2">FORNAVN (IFØLGE PASS):</label>
+    <input type="text" id="fornavn2">
+
+    <label for="etternavn2">ETTERNAVN (IFØLGE PASS):</label>
+    <input type="text" id="etternavn2">
+
+    <fieldset class="dob-container">
+        <legend><strong>FØDSELSDATO:</strong></legend>
+        <input type="number" min="1" max="31" placeholder="DD">
+        <input type="number" min="1" max="12" placeholder="MM">
+        <input type="number" min="1900" max="2025" placeholder="ÅÅÅÅ">
+    </fieldset>
+    
+
+    <fieldset class="gender-container">
+        <legend><strong>KJØNN</strong></legend>
+        <label>
+            <input type="radio" name="gender" value="kvinner">
+            KVINNE
+        </label>
+        <label>
+            <input type="radio" name="gender" value="mann">
+            MANN
+        </label>
+    </fieldset>
+    
+    <button class="submit-btn">Siste trinn →</button>
+</section>
+
+</main>
+
+    <footer>
+        <section class="countries">
+            <ul class="country-row">
+                <li><img src="flagg mappe/sweden.png" alt="Sverige"><span>Sverige</span></li>
+                <li><img src="flagg mappe/denmark.png" alt="Danmark"><span>Danmark</span></li>
+            </ul>
+            <ul class="country-row">
+                <li><img src="flagg mappe/norway.png" alt="Norge"><span>Norge</span></li>
+                <li><img src="flagg mappe/material.png" alt="Suomi"><span>Suomi</span></li>
+            </ul>
+            <ul class="country-row single">
+                <li><img src="flagg mappe/netherlands.png" alt="Nederland"><span>Nederland</span></li>
+            </ul>
+        </section>
+      <br>
+        <section class="payment-methods">
+            <h3>BETALINGSMETODER</h3>
+            <ul>
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
+                <li><i class="fa-brands fa-apple-pay"></i></li>
+                <li><i class="fa-brands fa-amazon-pay"></i></li>
+            </ul>
+        </section>
+
+        <article class="newsletter">
+            <h3>NYHETER & TILBUD</h3>
+            <form>
+                <span>Meld deg på nyhetsbrevet</span>
+                <div style="display:flex; flex-direction: row;">
+                    <input type="email" name="email" placeholder="ola@example.com">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+            <a href="#">Kjøp reisegavekort</a>
+        </article>
+
+        <nav class="customer-service">
+            <h3>KUNDESERVICE</h3>
+            <ul>
+                <li><a href="#">Spørsmål og Svar</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="tilgjengelighetserklaering.html">Tilgjengelighetserklæring</a></li>
+            </ul>
+        </nav>
+
+        <section class="social-media">
+            <h3>SOSIALE MEDIER</h3>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://pinterest.com" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </section>
+    </footer>
+</body>
+</html>
