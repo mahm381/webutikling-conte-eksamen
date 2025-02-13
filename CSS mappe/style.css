@@ -2703,7 +2703,21 @@ input, select {
 }
 
 
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
 
+.rating-score {
+  background-color: #008000; /* Grønn bakgrunn */
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 12px; /* Runde hjørner */
+  font-size: 16px;
+}
 
 
 /* Responsiv tilpasning */
